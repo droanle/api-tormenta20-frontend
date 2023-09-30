@@ -23,7 +23,7 @@ export default function Main() {
 
   useEffect(() => {
     axios
-      .get("https://tormenta20-api.herokuapp.com/api/classes")
+      .get("https://api-tormenta20.droanle.repl.co/api/classes")
       .then(response => {
         setData(response.data);
         setLoading(false);
@@ -33,7 +33,7 @@ export default function Main() {
   const handleSearch = () => {
     setLoading(true);
     axios
-      .get(`https://tormenta20-api.herokuapp.com/api/${search}`)
+      .get(`https://api-tormenta20.droanle.repl.co/api/${search}`)
       .then(response => {
         setData(response.data);
         setResult("SUCESSO");
